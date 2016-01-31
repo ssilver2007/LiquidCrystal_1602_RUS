@@ -28,31 +28,31 @@ uint8_t LiquidCrystal_1602_RUS::getCursorRow()
   return cursor_row;
 }
 void LiquidCrystal_1602_RUS::print(const char *str){
-	LiquidCrystal::print(str);
+	cursor_col += LiquidCrystal::print(str);
 }
 void LiquidCrystal_1602_RUS::print(int val, int base){
-  LiquidCrystal::print(val, base);
+  cursor_col += LiquidCrystal::print(val, base);
 }
 void LiquidCrystal_1602_RUS::print(unsigned int val, int base){
-  LiquidCrystal::print(val, base);
+  cursor_col += LiquidCrystal::print(val, base);
 }
 void LiquidCrystal_1602_RUS::print(long val, int base){
-  LiquidCrystal::print(val, base);
+  cursor_col += LiquidCrystal::print(val, base);
 }
 void LiquidCrystal_1602_RUS::print(unsigned long val, int base){
-  LiquidCrystal::print(val, base);
+  cursor_col += LiquidCrystal::print(val, base);
 }
 void LiquidCrystal_1602_RUS::print(char val, int base){
-  LiquidCrystal::print(val, base);
+  cursor_col += LiquidCrystal::print(val, base);
 }
 void LiquidCrystal_1602_RUS::print(unsigned char val, int base){
-  LiquidCrystal::print(val, base);
+  cursor_col += LiquidCrystal::print(val, base);
 }
 void LiquidCrystal_1602_RUS::print(const String &str){
-  LiquidCrystal::print(str);
+  cursor_col += LiquidCrystal::print(str);
 }
 void LiquidCrystal_1602_RUS::print(double val, int base){
-  LiquidCrystal::print(val, base);
+  cursor_col += LiquidCrystal::print(val, base);
 }
 void LiquidCrystal_1602_RUS::print(const wchar_t *_str){
   uint8_t rus_[8];
