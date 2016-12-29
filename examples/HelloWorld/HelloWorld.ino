@@ -14,7 +14,7 @@
  * wiper to LCD VO pin (pin 3)
   */
 
-#include "LiquidCrystal_1602_RUS.h"
+#include <LiquidCrystal_1602_RUS.h>
 
 //LiquidCrystal_1602_RUS lcd(12, 11, 5, 4, 3, 2);
 LiquidCrystal_1602_RUS lcd(8, 9, 4, 5, 6, 7 );//For LCD Keypad Shield
