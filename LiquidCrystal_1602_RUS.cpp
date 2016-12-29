@@ -405,15 +405,15 @@ void LiquidCrystal_1602_RUS::ResetAllIndex()
 //Перевод символа из кодировки ASCII в UTF-8 (для печати расширенных русских символов на LCD)
 wchar_t *LiquidCrystal_1602_RUS::asciiutf8(unsigned char ascii)
 {
-  if (ascii==168) char_utf8 = 0x401;//код ASCII буквы Ё
-  else if (ascii==184) char_utf8 = 0x451;//код ASCII буквы ё
+  if (ascii==168) *char_utf8 = 0x401;//код ASCII буквы Ё
+  else if (ascii==184) *char_utf8 = 0x451;//код ASCII буквы ё
   else if ((ascii>=192)&&(ascii<=255))//остальные буквы русского алфавита
   {
-    char_utf8 = ascii+848;
+    *char_utf8 = ascii+848;
   }
-  else char_utf8 = ascii;
+  else *char_utf8 = ascii;
 
-  return &char_utf8;
+  return char_utf8;
 }
 
 //Б
@@ -908,4 +908,4 @@ const byte rus_ya[8] PROGMEM = {
   0b00000
 };//я
 
-wchar_t char_utf8 = L" ";
+wchar_t *char_utf8 = L" ";
