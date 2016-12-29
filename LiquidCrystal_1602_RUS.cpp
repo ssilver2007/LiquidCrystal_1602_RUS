@@ -60,7 +60,7 @@ void LiquidCrystal_1602_RUS::print(const wchar_t *_str){
   int size = 0;
  
   //Определяем длину строки (количество символов)
-  while(_str[size] != NULL)
+  while(_str[size] != 0)
   {
     size++;
   }
@@ -345,7 +345,10 @@ void LiquidCrystal_1602_RUS::CharSetToLCD(uint8_t *array, uint8_t *index)
     *index = symbol_index;
     symbol_index++;
     if(symbol_index >= MAX_SYMBOL_COUNT)
+    {
     	symbol_index = 0;
+	ResetAllIndex();
+    }
   }
   else   //Иначе печатаем уже существующий
     write(*index);
