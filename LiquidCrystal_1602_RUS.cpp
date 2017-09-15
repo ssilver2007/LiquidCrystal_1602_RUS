@@ -30,7 +30,7 @@ uint8_t LiquidCrystal_1602_RUS::getCursorRow()
   return cursor_row;
 }
 
-uint8_t LCD_1602_RUS::mbtowc(wchar_t *_chr, char *_str, uint8_t mb_num) {
+uint8_t LiquidCrystal_1602_RUS::mbtowc(wchar_t *_chr, char *_str, uint8_t mb_num) {
   if (mb_num != 2) return 0;
   if ((_str[0] & 0xC0) == 0xC0 && (_str[1] & 0x80) == 0x80) {
     *_chr = ((_str[0] & 0x1F) << 6) + (_str[1] & 0x3F);
@@ -182,7 +182,7 @@ void LiquidCrystal_1602_RUS::ResetAllIndex()
   index_rus_ya=255;
 }
 
-void LCD_1602_RUS::printwc(const wchar_t _chr){
+void LiquidCrystal_1602_RUS::printwc(const wchar_t _chr){
   uint8_t rus_[8];
   switch(_chr)
   {
