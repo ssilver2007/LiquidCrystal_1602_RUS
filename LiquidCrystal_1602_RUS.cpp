@@ -8,6 +8,8 @@ LiquidCrystal_1602_RUS :: LiquidCrystal_1602_RUS(uint8_t rs,  uint8_t enable,
                              uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3) : LiquidCrystal (rs, enable, d0, d1, d2, d3)
 {
    symbol_index = 0;
+   cursor_col = 0;
+   cursor_row = 0;
    ResetAllIndex();//Сброс значений индексов (неинициализированы = 255)
 }
 void LiquidCrystal_1602_RUS::clear()
