@@ -378,68 +378,68 @@ void LiquidCrystal_1602_RUS::printwc(const wchar_t _chr){
     break;
     //Русский алфавит, использующий одинаковые с английским алфавитом символы
     case 1040: //А
-      LiquidCrystal_I2C::print("A");
+      LiquidCrystal::print("A");
     break;
     case 1042: //В
-      LiquidCrystal_I2C::print("B");
+      LiquidCrystal::print("B");
     break;
     case 1045: //Е
-      LiquidCrystal_I2C::print("E");
+      LiquidCrystal::print("E");
     break;
     case 1025: //Ё
-      LiquidCrystal_I2C::print("E");
+      LiquidCrystal::print("E");
     break;
     case 1050: //К
-      LiquidCrystal_I2C::print("K");
+      LiquidCrystal::print("K");
     break;
     case 1052: //M
-      LiquidCrystal_I2C::print("M");
+      LiquidCrystal::print("M");
     break;
     case 1053: //H
-      LiquidCrystal_I2C::print("H");
+      LiquidCrystal::print("H");
     break;
     case 1054: //O
-      LiquidCrystal_I2C::print("O");
+      LiquidCrystal::print("O");
     break;
     case 1056: //P
-      LiquidCrystal_I2C::print("P");
+      LiquidCrystal::print("P");
     break;
     case 1057: //C
-      LiquidCrystal_I2C::print("C");
+      LiquidCrystal::print("C");
     break;
     case 1058: //T
-      LiquidCrystal_I2C::print("T");
+      LiquidCrystal::print("T");
     break;
     case 1061: //X
-      LiquidCrystal_I2C::print("X");
+      LiquidCrystal::print("X");
     break;
     case 1072: //а
-      LiquidCrystal_I2C::print("a");
+      LiquidCrystal::print("a");
     break;
     case 1077: //е
-      LiquidCrystal_I2C::print("e");
+      LiquidCrystal::print("e");
     break;
     case 1086: //o
-      LiquidCrystal_I2C::print("o");
+      LiquidCrystal::print("o");
     break;
     case 1088: //p
-      LiquidCrystal_I2C::print("p");
+      LiquidCrystal::print("p");
     break;
     case 1089: //c
-      LiquidCrystal_I2C::print("c");
+      LiquidCrystal::print("c");
     break;
     case 1091: //y
-      LiquidCrystal_I2C::print("y");
+      LiquidCrystal::print("y");
     break;
     case 1093: //x
-      LiquidCrystal_I2C::print("x");
+      LiquidCrystal::print("x");
     break;
     case 0x00B0: //Знак градуса
-      LiquidCrystal_I2C::write(223);
+      LiquidCrystal::write(223);
     break;
     //Английский алфавит без изменения
     default:
-      LiquidCrystal_I2C::print((char)_chr);
+      LiquidCrystal::print((char)_chr);
     break;
   }
 }
