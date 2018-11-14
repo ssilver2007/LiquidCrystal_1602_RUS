@@ -4,9 +4,15 @@
 
 wchar_t char_utf8[] = L" ";
 
+//user_custom_symbols - количество символов, доступное пользователю для использования в своих целях (не более 8)
+//Всего переопределяемых символов в LCD - 8.
+//Символы с индексом от 0 до (7 - user_custom_symbols) используются библиотекой
+//Символы с индексом от (8 - user_custom_symbols) до 7 - можно переопределять пользователю
+//По умолчанию количество переопределяемых символов равно 0
 LiquidCrystal_1602_RUS :: LiquidCrystal_1602_RUS(uint8_t rs,  uint8_t enable,
-    uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3) : LiquidCrystal (rs, enable, d0, d1, d2, d3)
+    uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t user_custom_symbols) : LiquidCrystal (rs, enable, d0, d1, d2, d3)
 {
+  max_symbol_count = 8 - user_custom_symbols;
   symbol_index = 0;
   cursor_col = 0;
   cursor_row = 0;
@@ -123,7 +129,7 @@ void LiquidCrystal_1602_RUS::CharSetToLCD(uint8_t *array, uint8_t *index)
     //Запомианем, что букве соответствует определенный индекс
     *index = symbol_index;
     symbol_index++;
-    if (symbol_index >= MAX_SYMBOL_COUNT)
+    if (symbol_index >= max_symbol_count)
     {
       symbol_index = 0;
       ResetAllIndex();
