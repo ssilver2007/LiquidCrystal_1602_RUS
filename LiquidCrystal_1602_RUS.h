@@ -1,3 +1,6 @@
+#ifndef _LiquidCrystal_1602_RUS
+#define _LiquidCrystal_1602_RUS
+
 #if defined(ARDUINO) && ARDUINO >= 100
   #include "Arduino.h"
 #else
@@ -152,3 +155,5 @@ extern const byte rus_yu[];
 extern const byte rus_ya[];
 
 extern wchar_t char_utf8[];
+
+#endif
