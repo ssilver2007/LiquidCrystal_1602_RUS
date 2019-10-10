@@ -21,13 +21,16 @@ LiquidCrystal_1602_RUS lcd(8, 9, 4, 5, 6, 7 );//For LCD Keypad Shield
 
 void setup()
 {
+  String str;
+  str = "на русском";
+ 
   // set up the LCD's number of columns and rows:
   lcd.begin(16, 2);
   // Print a message to the LCD.
   lcd.setCursor(1, 0);
-  lcd.print(L"Можно печатать");
+  lcd.print("Можно печатать");
   lcd.setCursor(3, 1);
-  lcd.print(L"на русском");
+  lcd.print(str);
 }
 
 void loop()
