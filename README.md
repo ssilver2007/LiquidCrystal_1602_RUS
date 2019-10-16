@@ -1,3 +1,6 @@
+Внимание: новая объединенная версия библиотек для подключения экрана как по I2C, так и посредством 10 контактов:
+https://github.com/ssilver2007/LCD_1602_RUS_ALL
+
 # LiquidCrystal_1602_RUS
 Arduino LCD 16x02 display RUSSIAN with NO CYRILLIC symbols set (addon for standart LiquidCrystal library)
 
